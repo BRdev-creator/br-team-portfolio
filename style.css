@@ -767,3 +767,11 @@ body::after {
   }
 
 }
+/* BR Team Background Test */
+
+body {
+  background:
+    radial-gradient(circle at 20% 30%, #171744, transparent 35%),
+    radial-gradient(circle at 80% 70%, #25133d, transparent 35%),
+    #050505;
+}
