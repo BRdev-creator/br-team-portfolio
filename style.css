@@ -775,3 +775,76 @@ body {
     radial-gradient(circle at 80% 70%, #25133d, transparent 35%),
     #050505;
 }
+/* =========================================
+   BR TEAM - FEATURED VIDEO SECTION
+   ========================================= */
+
+.video-section {
+  position: relative;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(12px);
+  transition: 0.35s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  border-color: #555;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #000;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.video-info {
+  padding: 22px;
+}
+
+.video-info > span {
+  color: #666;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.video-info h3 {
+  margin-top: 12px;
+  font-size: 19px;
+}
+
+.video-info p {
+  margin-top: 7px;
+  color: #888;
+  font-size: 13px;
+}
+
+
+/* Mobile */
+@media (max-width: 850px) {
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+}
