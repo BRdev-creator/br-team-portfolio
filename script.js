@@ -46,3 +46,56 @@ contactForm.addEventListener("submit", function(event) {
 
   formMessage.textContent = "Opening your email app...";
 });
+/* =========================================
+   BR TEAM - FLOATING PARTICLES
+   ========================================= */
+
+const particleContainer = document.createElement("div");
+
+particleContainer.className = "br-particles";
+
+document.body.appendChild(particleContainer);
+
+
+// Number of particles
+const particleCount =
+  window.innerWidth < 600 ? 18 : 35;
+
+
+for (let i = 0; i < particleCount; i++) {
+
+  const particle = document.createElement("div");
+
+  particle.className = "br-particle";
+
+  // Random horizontal position
+  particle.style.left =
+    Math.random() * 100 + "%";
+
+  // Random starting position
+  particle.style.top =
+    Math.random() * 100 + "%";
+
+  // Random size
+  const size =
+    Math.random() * 3 + 1;
+
+  particle.style.width =
+    size + "px";
+
+  particle.style.height =
+    size + "px";
+
+
+  // Random animation duration
+  particle.style.animationDuration =
+    (Math.random() * 15 + 10) + "s";
+
+
+  // Random delay
+  particle.style.animationDelay =
+    (Math.random() * 10) + "s";
+
+
+  particleContainer.appendChild(particle);
+}
