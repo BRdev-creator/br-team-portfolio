@@ -602,3 +602,168 @@ footer {
   }
 
 }
+/* =========================================
+   BR TEAM - PREMIUM ANIMATED BACKGROUND
+   ========================================= */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: #050505;
+}
+
+/* Animated background glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: -3;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(80, 80, 255, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(180, 60, 255, 0.14),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(40, 140, 255, 0.12),
+      transparent 28%
+    );
+
+  filter: blur(60px);
+
+  animation: brGlowMove 18s ease-in-out infinite alternate;
+}
+
+/* Subtle moving gradient layer */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.015),
+      transparent 40%,
+      rgba(120,80,255,0.025)
+    );
+
+  animation: brGradientMove 12s ease-in-out infinite alternate;
+}
+
+/* Make sections slightly transparent so background can be seen */
+.hero,
+.section,
+.cta-section {
+  position: relative;
+}
+
+/* Premium glass effect for cards */
+.hero-card,
+.skill-card,
+.service-card,
+.highlight,
+.contact-item {
+  background: rgba(15, 15, 15, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Glow animation */
+@keyframes brGlowMove {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(-2%, 5%, 0) scale(1.03);
+  }
+}
+
+@keyframes brGradientMove {
+  0% {
+    transform: translateX(-2%);
+  }
+
+  100% {
+    transform: translateX(2%);
+  }
+}
+
+/* =========================================
+   FLOATING PARTICLES
+   ========================================= */
+
+.br-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.br-particle {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 0 10px rgba(130, 100, 255, 0.8);
+
+  animation:
+    brParticleFloat linear infinite,
+    brParticleFade ease-in-out infinite alternate;
+}
+
+@keyframes brParticleFloat {
+  from {
+    transform: translateY(110vh) translateX(0);
+  }
+
+  to {
+    transform: translateY(-10vh) translateX(80px);
+  }
+}
+
+@keyframes brParticleFade {
+  from {
+    opacity: 0.15;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* Mobile performance */
+@media (max-width: 600px) {
+
+  body::before {
+    filter: blur(45px);
+  }
+
+  .br-particle {
+    width: 2px;
+    height: 2px;
+  }
+
+}
