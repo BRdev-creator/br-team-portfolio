@@ -647,7 +647,7 @@ drawStars();
 window.addEventListener('scroll', () => {
   const meridians = document.getElementById('meridians');
   const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  const rotation = scrollPercent * 3.6;
+  const rotation = scrollPercent * 9.2;
   meridians.style.transformOrigin = '50px 50px';
   meridians.style.transform = `rotate(${rotation}deg)`;
 });
