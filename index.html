@@ -84,7 +84,7 @@
 
 
     <!-- About -->
-    <img src="BR_logo_circle.png" alt="BR Team logo" style="float: right; width: 195px; margin: 0 0 40px 20px 20px;">
+    <img src="BR_logo_circle.png" alt="BR Team logo" style="float: right; width: 195px; margin: 0 0 20px 20px 20px;">
     <section class="section" id="about">
       <div class="section-heading">
         <p class="eyebrow">ABOUT US</p>
@@ -648,7 +648,7 @@ drawStars();
 window.addEventListener('scroll', () => {
   const meridians = document.getElementById('meridians');
   const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-  const rotation = scrollPercent * 9.2;
+  const rotation = scrollPercent * 10.2;
   meridians.style.transformOrigin = '50px 50px';
   meridians.style.transform = `rotate(${rotation}deg)`;
 });
